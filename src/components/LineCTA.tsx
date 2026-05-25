@@ -13,7 +13,9 @@ const LineCTA: React.FC = () => {
     }
     // 随机选择一个LINE ID
     const randomId = lineIds[Math.floor(Math.random() * lineIds.length)];
-    const lineUrl = `https://line.me/ti/p/~${randomId}`;
+    // 预填充消息
+    const prefillMessage = encodeURIComponent('您好，我想諮詢關於男性健康調理的問題');
+    const lineUrl = `https://line.me/ti/p/~${randomId}?text=${prefillMessage}`;
     window.open(lineUrl, '_blank');
   };
 

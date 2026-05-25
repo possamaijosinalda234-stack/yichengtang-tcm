@@ -7,6 +7,10 @@ const LineCTA: React.FC = () => {
   const lineIds = ['23614600', '51097845'];
 
   const handleLineClick = () => {
+    // 追踪FB点击事件
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'Contact');
+    }
     // 随机选择一个LINE ID
     const randomId = lineIds[Math.floor(Math.random() * lineIds.length)];
     const lineUrl = `https://line.me/ti/p/~${randomId}`;

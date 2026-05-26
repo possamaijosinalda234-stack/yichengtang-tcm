@@ -26,6 +26,11 @@ const FloatingCTA: React.FC = () => {
       transition={{ duration: 0.5, delay: 1 }}
       className="fixed bottom-6 left-4 right-4 z-50"
     >
+      <div className="bg-white rounded-xl p-3 shadow-lg mb-3">
+        <p className="text-amber-600 text-xs text-center font-medium">
+          💡 加LINE後請主動發送「我想諮詢」
+        </p>
+      </div>
       <motion.button
         onClick={handleLineClick}
         whileHover={{ scale: 1.02 }}

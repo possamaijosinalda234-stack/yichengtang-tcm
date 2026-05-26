@@ -36,6 +36,11 @@ const LineCTA: React.FC = () => {
             <p className="text-stone-500 text-sm">
               專業醫師為您解答，保護您的隱私
             </p>
+            <div className="mt-4 bg-amber-50 border border-amber-200 rounded-lg p-3">
+              <p className="text-amber-700 text-sm font-medium">
+                💡 提示：加LINE好友後，請主動發送「我想諮詢」
+              </p>
+            </div>
           </div>
 
           <motion.button

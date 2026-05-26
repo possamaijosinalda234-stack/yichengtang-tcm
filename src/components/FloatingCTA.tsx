@@ -3,19 +3,16 @@ import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
 
 const FloatingCTA: React.FC = () => {
-  // 两个LINE ID轮流跳转
-  const lineIds = ['23614600', '51097845'];
+  // LINE官方账号
+  const lineId = '982lzusp';
 
   const handleLineClick = () => {
     // 追踪FB点击事件
     if (typeof window !== 'undefined' && (window as any).fbq) {
       (window as any).fbq('track', 'Contact');
     }
-    // 随机选择一个LINE ID
-    const randomId = lineIds[Math.floor(Math.random() * lineIds.length)];
-    // 预填充消息
-    const prefillMessage = encodeURIComponent('您好，我想諮詢關於男性健康調理的問題');
-    const lineUrl = `https://line.me/ti/p/~${randomId}?text=${prefillMessage}`;
+    // LINE官方账号链接（支持自动欢迎语）
+    const lineUrl = `https://line.me/ti/p/@${lineId}`;
     window.open(lineUrl, '_blank');
   };
 

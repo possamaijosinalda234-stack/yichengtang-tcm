@@ -3,16 +3,15 @@ import { motion } from 'framer-motion';
 import { MessageCircle, ArrowRight } from 'lucide-react';
 
 const LineCTA: React.FC = () => {
-  // LINE官方账号
-  const lineId = '982lzusp';
+  // LINE私人号
+  const lineId = '51097845';
 
   const handleLineClick = () => {
     // 追踪FB点击事件
     if (typeof window !== 'undefined' && (window as any).fbq) {
       (window as any).fbq('track', 'Contact');
     }
-    // LINE官方账号链接（支持自动欢迎语）
-    const lineUrl = `https://line.me/ti/p/@${lineId}`;
+    const lineUrl = `https://line.me/ti/p/~${lineId}`;
     window.open(lineUrl, '_blank');
   };
 
